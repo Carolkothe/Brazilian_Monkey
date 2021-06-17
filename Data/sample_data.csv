@@ -1,0 +1,11 @@
+;SampleID;EnvType;Region;Gender;Age;Weight;Appearance
+BCM8;BCM8;Feces;Sao Sebastiao do Cai;F;A;M;Healthy (lactating)
+BCM9;BCM9;Feces;Sao Sebastiao do Cai;F;Y;P;Healthy
+BCM12;BCM12;Feces;Sao Sebastiao do Cai;F;A;G;Healthy
+BCM14;BCM14;Feces;Sao Sebastiao do Cai;M;Y;P;Healthy
+BCM15;BCM15;Feces;Sao Sebastiao do Cai;M;Y;M;Healthy
+BCM23;BCM23;Feces;Santa Cruz do Sul;M;A;G;Healthy
+BCM24;BCM24;Feces;Santa Cruz do Sul;M;A;G;Healthy
+BCM26;BCM26;Feces;Santa Cruz do Sul;F;A;M;Healthy
+BCM27;BCM27;Feces;Santa Cruz do Sul;M;A;M;Healthy
+BCM28;BCM28;Feces;Santa Cruz do Sul;M;A;M;Healthy
