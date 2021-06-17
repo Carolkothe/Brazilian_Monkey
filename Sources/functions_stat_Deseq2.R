@@ -3,10 +3,18 @@
 library("DESeq2")
 library(ggplot2)
 library(FactoMineR)
-monkey_countData <- read.csv('~/work/Monkey/Deseq/Deseq_monkey.csv', header = TRUE, sep = "\t", row.names=1)
+
+# working directory
+wd <- list()
+
+# The path for the data in my working directory (must be changed according to your environment)
+wd$data   <- "C:/Users/myUser/data/"
+
+
+monkey_countData <- read.csv(paste(wd$data, 'Deseq_monkey.csv', sep=""), header = TRUE, sep = "\t", row.names=1)
 head(monkey_countData)
 
-metadata <- read.csv('~/work/Monkey/Deseq/Deseq_metadata.tsv', header = TRUE, sep = "\t", row.names=1)
+metadata <- read.csv(paste(wd$data, 'Deseq_metadata.tsv', sep=""), header = TRUE, sep = "\t", row.names=1)
 head(metadata)
 
 
