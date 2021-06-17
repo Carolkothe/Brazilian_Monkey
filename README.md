@@ -3,5 +3,11 @@ Fecal bacterial communities of wild black capuchin monkeys (Sapajus nigritus) fr
 ## Directory organisation
 This is our project architecture:
 * `data`: input files
-* `sources`: codes files
-* `README.md`: description of the project
+* `sources`: code files
+* `README.md`: project description
+
+### Sources
+* `Monkey_phyloseq`: R code to generate composition plots (phylum, family and genera), alpha-diversity (boxplots, ANOVA and linear tests) and beta-diversity (PCA, clustering and permanova test);
+* `OTUs_stat_Deseq2`:  R code to identify if there are  statistic differences between the two regions assesed in the study (Santa Cruz do Sul and São Sebastião do Cai) for phylum and family OTUs; 
+* `picrust.sh`: this code are used to predict the functional potential of the bacterial community on the basis of 16S rRNA gene sequencing and the complete tutorial can found [here](https://github.com/picrust/picrust2). To running this code, you need to install conda environment picrust2-2.3.0_b.
+* `functions_stat_Deseq2`: R code to identify if there are statistic differences between the two regions assesed in the study (Santa Cruz do Sul and São Sebastião do Cai) for the predicted functions.
