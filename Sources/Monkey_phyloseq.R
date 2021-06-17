@@ -36,11 +36,11 @@ wd <- list()
 wd$data   <- "C:/Users/myUser/data/"
 
 #add tables
-otu_table <- read.csv2(wd$data + "otu_table.csv",row.names=1, dec=".")
+otu_table <- read.csv2(paste(wd$data, "otu_table.csv", sep=""),row.names=1, dec=".")
 
-tax_table <- read.csv2(wd$data + "tax_table.csv",row.names=1, dec=".")
+tax_table <- read.csv2(paste(wd$data ,"tax_table.csv", sep=""),row.names=1, dec=".")
 
-sample_data <- read.csv2(wd$data + "sample_data.csv",row.names=1, dec=".")
+sample_data <- read.csv2(paste(wd$data, "sample_data.csv", sep=""),row.names=1, dec=".")
 
 #convert to matrix
 taxM <- as.matrix(tax_table)
