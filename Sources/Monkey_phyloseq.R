@@ -29,12 +29,18 @@ for (url in urls) {
   source(url)
 }
 
+# working directory
+wd <- list()
+
+# The path for the data in my working directory
+wd$data   <- "C:/Users/myUser/data/"
+
 #add tables
-otu_table <- read.csv2("C:/Users/cikhote/Desktop/Meu PC 12.09/Thèse Caroline 2/Brazil projects/Projeto Brasil - Jeverson - Ana/Macacos ion torrent/Article Tiela/Reviewers reponses/Supplementary_material_monkey/otu_table.csv",row.names=1, dec=".")
+otu_table <- read.csv2(wd$data + "otu_table.csv",row.names=1, dec=".")
 
-tax_table <- read.csv2("C:/Users/cikhote/Desktop/Meu PC 12.09/Thèse Caroline 2/Brazil projects/Projeto Brasil - Jeverson - Ana/Macacos ion torrent/Article Tiela/Reviewers reponses/Supplementary_material_monkey/tax_table.csv",row.names=1, dec=".")
+tax_table <- read.csv2(wd$data + "tax_table.csv",row.names=1, dec=".")
 
-sample_data <- read.csv2("C:/Users/cikhote/Desktop/Meu PC 12.09/Thèse Caroline 2/Brazil projects/Projeto Brasil - Jeverson - Ana/Macacos ion torrent/Article Tiela/Reviewers reponses/Supplementary_material_monkey/sample_data.csv",row.names=1, dec=".")
+sample_data <- read.csv2(wd$data + "sample_data.csv",row.names=1, dec=".")
 
 #convert to matrix
 taxM <- as.matrix(tax_table)
@@ -49,7 +55,7 @@ monkey = phyloseq(OTU, TAX)
 sample_data(monkey) <-sample_data
 
 #add to phyloseq tree
-tree <- read_tree("C:/Users/cikhote/Desktop/Meu PC 12.09/Thèse Caroline 2/Brazil projects/Projeto Brasil - Jeverson - Ana/Macacos ion torrent/Article Tiela/Reviewers reponses/Supplementary_material_monkey/Tree.nwk")
+tree <- read_tree(wd$data + "Tree.nwk")
 phy_tree(monkey) <- tree
 
 #rarefy_even_depth downsamples/normalizes all samples to the same depth and prunes OTUs that disappear from all samples as a result. 
