@@ -4,12 +4,19 @@
 library("DESeq2")
 library(ggplot2)
 library(FactoMineR)
-family_abundance <- read.csv('~/work/Monkey/Deseq/Deseq_family.tsv', header = TRUE, sep = "\t", row.names=1)
+
+# working directory
+wd <- list()
+
+# The path for the data in my working directory
+wd$data   <- "C:/Users/myUser/data/"
+
+family_abundance <- read.csv(paste(wd$data,'Deseq_family.tsv', sep=""), header = TRUE, sep = "\t", row.names=1)
 head(family_abundance)
-phylum_abundance <- read.csv('~/work/Monkey/Deseq/Deseq_phylum.tsv', header = TRUE, sep = "\t", row.names=1)
+phylum_abundance <- read.csv(paste(wd$data, 'Deseq_phylum.tsv', sep=""), header = TRUE, sep = "\t", row.names=1)
 head(phylum_abundance)
 
-metadata <- read.csv('~/work/Monkey/Deseq/Deseq_metadata.tsv', header = TRUE, sep = "\t", row.names=1)
+metadata <- read.csv(paste(wd$data, 'Deseq_metadata.tsv', sep=""), header = TRUE, sep = "\t", row.names=1)
 head(metadata)
 
 dds_family <- DESeqDataSetFromMatrix(countData=round(family_abundance), 
